@@ -1,0 +1,58 @@
+﻿@model EShop.Models.User
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>User</legend>
+    <div>
+
+       ID:  @Model.Id
+    </div>
+    <div>
+
+        FirstName:  @Model.FirstName
+    </div>
+
+    <div>
+        LastName : @Model.LastName
+    </div>
+
+
+    <div>
+        User Name : @Model.UserName
+    </div>
+
+    <div>
+        User Name : @Model.Email
+    </div>
+
+    <div>
+        User Name : @Model.Password
+    </div>
+
+    <div>
+        User Name : @Model.SecretQuestion
+    </div>
+
+    <div>
+        User Name : @Model.SecretAnswer
+    </div>
+    <div>
+        User Name : @Model.Age
+    </div>
+    <div>
+
+        Profile Photo:  @Model.ProfilePhoto
+    </div>
+
+    
+
+</fieldset>
+    <a href="~/Admin/DeleteConfirmed/@Model.Id">Yes</a> 
+   
+    
+

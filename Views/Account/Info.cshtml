@@ -1,0 +1,82 @@
+﻿@model EShop.Models.User
+
+
+                            @using (Html.BeginForm("changeUserInfo", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                <fieldset>
+                                <div id="editor-label">
+                                @Html.Label("Change Profile Photo")
+                                </div>
+                                <br>
+                                <img src="~/Files/@Model.ProfilePhoto" alt="image not available">
+                                @Html.TextBoxFor(model => model.ProfilePhoto, new { type = "file" })
+                                @Html.ValidationMessageFor(model => model.ProfilePhoto)
+
+                                    <div id="editor-label">
+                                        @Html.HiddenFor(model => model.Id, new { @placeholder = " Enter New Password" })
+                                        <div id="editor-label">
+                                            @Html.Label("First Name")
+                                        </div>
+                                        <div id="editor-field">
+                                            @Html.TextBoxFor(model => model.FirstName, new { @placeholder = " Enter New Password" })
+                                            @Html.ValidationMessageFor(model => model.FirstName)
+                                        </div>
+                                        <div id="editor-label">
+                                            @Html.Label("Last Name")
+                                        </div>
+                                        <div id="editor-field">
+                                            @Html.TextBoxFor(model => model.LastName, new { @placeholder = " Enter New Password" })
+
+                                            @Html.ValidationMessageFor(model => model.LastName)
+                                        </div>
+                                        <div id="editor-label">
+                                            @Html.Label("User Name")
+                                        </div>
+                                        <div id="editor-field">
+                                            @Html.TextBoxFor(model => model.UserName, new { @placeholder = " Enter New Password" })
+                                            @Html.ValidationMessageFor(model => model.UserName)
+                                        </div>
+                                        <div id="editor-label">
+                                            @Html.Label("Email")
+                                        </div>
+                                        <div id="editor-field">
+                                            @Html.TextBoxFor(model => model.Email, new { @placeholder = " Enter New Password" })
+                                            @Html.ValidationMessageFor(model => model.Email)
+                                        </div>
+                                        <div id="editor-label">
+                                            @Html.Label("Secret Question")
+                                        </div>
+                                        <div id="editor-field">
+                                            @Html.TextBoxFor(model => model.SecretQuestion, new { @placeholder = " Enter New Password" })
+                                            @Html.ValidationMessageFor(model => model.SecretQuestion)
+                                        </div>
+                                        <div id="editor-label">
+                                            @Html.Label("Secret Answer")
+                                        </div>
+                                    </div>
+                                    <div id="editor-field">
+                                        @Html.TextBoxFor(model => model.SecretAnswer, new { @placeholder = " Enter New Password" })
+                                        @Html.ValidationMessageFor(model => model.SecretAnswer)
+                                    </div>
+                                    <div id="editor-label">
+                                        @Html.Label("Age")
+                                    </div>
+                                    <div id="editor-field">
+                                        @Html.TextBoxFor(model => model.Age, new { @placeholder = " Enter New Password" })
+                                        @Html.ValidationMessageFor(model => model.Age)
+                                    </div>
+                                    <div id="editor-label">
+                                        @Html.Label("Password")
+                                    </div>
+                                    <div id="editor-field">
+                                        @Html.TextBoxFor(model => model.Password, new { @placeholder = " Enter New Password" })
+                                        @Html.ValidationMessageFor(model => model.Password)
+                                    </div>
+                                    
+                                        <button type="submit" class="btn btn-default" id="log">Submit</button>
+
+</fieldset>
+                                <a href="~/Home/Index" class="btn-default">Home Page</a>
+                            }
+                        
+      
